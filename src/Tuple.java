@@ -4,6 +4,9 @@ import java.util.Comparator;
 
 /**
  * Created by maria on 2017-04-06.
+ *
+ * This implementation only calculates the tf-score instead of tf-idf, since the idf term is the same for all words
+ * and hence doesn't contribute to the sorting.
  */
 
 public class Tuple {

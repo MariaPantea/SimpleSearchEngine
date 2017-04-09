@@ -4,6 +4,9 @@ import java.util.Map;
 
 /**
  * Created by maria on 2017-04-04.
+ *
+ * This implementation only calculates the tf-score instead of tf-idf, since the idf term is the same for all words
+ * and hence doesn't contribute to the sorting.
  */
 
 public class SearchEngine {
@@ -45,13 +48,9 @@ public class SearchEngine {
                  // Add tuple to list of values
                  else {
                     values.add(tuple);
-                    //Tuple.sortTuples(values);
                     vocabulary.put(word, values);
-                }
-
-
-            }
-
+                 }
+             }
             docNum++;
         }                                            
     }
@@ -84,15 +83,11 @@ public class SearchEngine {
                 "the red fox bit the lazy dog cat",
                 "fox"
         };
-
         updateVocabulary(documents);
-
 
         // Get the documents containing "brown":
         String searchWord = "brown";
         System.out.print(searchWord + ": " + search(searchWord));
-
-
     }
 
 }
