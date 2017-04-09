@@ -87,6 +87,8 @@ public class SearchEngine {
 
         updateVocabulary(documents);
 
+
+        // Get the documents containing "brown":
         String searchWord = "brown";
         System.out.print(searchWord + ": " + search(searchWord));
 
